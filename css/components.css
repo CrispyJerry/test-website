@@ -72,6 +72,7 @@
 .contact-form input,
 .contact-form textarea,
 .contact-form select{
+    box-sizing: border-box;
     width: 80%;
     padding: var(--space-sm);
     border: 2px solid rgba(0, 0, 0, 0.35);
@@ -88,8 +89,14 @@
 }
 
 .contact-form .h-captcha{
+    box-sizing: border-box;
     display: flex;
     justify-content: flex-start;
+    overflow: hidden;
+}
+
+.contact-form .h-captcha iframe{
+    max-width: 100%;
 }
 
 .contact-form input:not([type="hidden"]):not([type="submit"]):not(:placeholder-shown):valid,
